@@ -1,0 +1,17 @@
+
+<div class="container text-center d-flex justify-content-center align-items-center flex-column">
+    <h1>Béremelés Számoló</h1>
+      <label for="beosztas">Dolgozó beosztása:</label>
+    <input type="text" id="beosztas" [(ngModel)]="beosztas" />
+  
+    <label for="bruttoBer">Bruttó bér:</label>
+    <input type="number" id="bruttoBer" [(ngModel)]="bruttoBer" />
+  
+    <button class="mb-2 mt-2 btn btn-primary" (click)="szamol()">Számol</button>
+    
+    <div *ngIf="beremeles > 0">
+      <p>Béremelés: {{ beremeles | currency: 'HUF' }}</p>
+      <p>Új bruttó bér: {{ ujBruttoBer | currency: 'HUF' }}</p>
+    </div>
+  </div>
+  
